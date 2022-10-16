@@ -1,0 +1,93 @@
+	/* REACT SLICK ARROW CUSTOM CSS */
+   body {margin: 0; 
+    background-color: whitesmoke!important;
+   }
+
+ .headings{
+  color: white;
+  padding: 20px;
+ }
+ .headings2{
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+ }
+ .headingspace{
+  padding: 20px;
+ }
+ .bestsellers{
+  margin: 40px 0px;
+ 
+  background: url('https://media.sugarcosmetics.com/upload/homePageBackGroundTexture.jpg');
+  
+ }
+ .supersavers{
+  margin: 30px 0px;
+ 
+  background: url('https://media.sugarcosmetics.com/upload/VTOBackgroungTexture.png');
+  
+ }
+ .justin{
+  margin: 20px 60px;
+  padding: 10px;
+ 
+ }
+ .bestsellersSlider{
+  width: 80%;
+ margin:  auto;
+ 
+
+ }
+ 
+ .justinSlider, .hotdealsSlider{
+  width:93%;
+  margin:  auto;
+  border-radius: 10px;
+ }
+ .hotdeals img{
+  border: 10px solid whitesmoke;
+  border-radius: 20px;
+ }
+ .hotdeals{
+  background-color: whitesmoke;
+ 
+ }
+ 
+ 
+ .sugarhain iframe{
+ margin: 20px auto;
+  border-radius: 10px;
+
+}
+
+.newlaunches{
+ width: 92%;
+ margin: 0px auto;
+ 
+}
+.newlaunches img{
+  border-radius: 10px;
+}
+.iframe{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+.tot img{
+  width: 50%;
+  border-radius: 30px;
+  padding: 20px;
+
+}
+.tot{
+  display: flex;
+  width: 95%;
+ margin: 0px auto;
+}
+    

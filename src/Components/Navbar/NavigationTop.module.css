@@ -1,0 +1,44 @@
+.sugarlogo{
+   width: 15%;
+}
+.sugarnavtop{
+    background-color: black;
+    padding: 10px;
+}
+.sugarlogoimg{
+padding: 5px 20px;
+
+}
+.searchtop{
+    width:45%;
+    align-self: center;
+    margin-left: 10px;
+}
+.loginregister{
+   width: 30%;
+   align-self: center;
+  display: flex;
+  align-items: center;
+justify-content: center;
+gap: 6px;
+
+}
+.icongroup{
+    display: flex ;
+    align-items: center;
+justify-content: center;
+}
+.quantityNum{
+    background-color: #fc2779;
+    position: absolute;
+    top: 20px;
+    right:75px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+  
+}
+.quantityNum p{
+    font-size: 10px;
+    font-weight: 600;
+}
