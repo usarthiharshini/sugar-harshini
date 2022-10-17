@@ -9,14 +9,16 @@ import Makeup from "../Pages/Makeup";
 import Skincare from "../Pages/Skincare";
 import Trending from "../Pages/Trending";
 import MakeupIndividual from "./IndividualPages/MakeupIndividual";
-
+import Search from "../Pages/Search";
 import LipsIndividual from "./IndividualPages/LipsIndividual";
+import Login from "../Pages/Login";
 function AllPages
 (){
     return <div>
         
        <Routes>
         <Route path="/"  element={<Home/>}></Route>
+        <Route path="/login"  element={<Login/>}></Route>
         <Route path="/cart"  element={<Cart/>}></Route>
         <Route path="/makeup"  element={<Makeup/>}></Route>
         <Route path="/brushes"  element={<Brushes/>}></Route>
@@ -27,6 +29,7 @@ function AllPages
         <Route path="/Face"  element={<Face/>}></Route>
         <Route path="/makeup/:id"  element={<MakeupIndividual/>}></Route>
         <Route path="/lips/:id"  element={<LipsIndividual/>}></Route>
+        <Route path="/search/"  element={<Search/>}></Route>
         
        </Routes>
 

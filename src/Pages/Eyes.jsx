@@ -107,9 +107,9 @@ function Eyes() {
             </Menu>
           </Box>
         </Box>
-        <Grid display='grid' templateColumns='repeat(3, 1fr)' w='75%' m='10px'>
+        <Grid display='grid' templateColumns={{ lg:'repeat(3,1fr)',md:'repeat(2,1fr)',sm:'repeat(1,1fr)'}} w='75%' m='10px'>
 
-          {data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox catg={elem.catg} id={elem.id} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
+          {data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox rating={elem.rating} catg={elem.catg} id={elem.id} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
 
 
         </Grid>

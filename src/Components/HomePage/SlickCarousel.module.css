@@ -36,8 +36,6 @@
  .bestsellersSlider{
   width: 80%;
  margin:  auto;
- 
-
  }
  
  .justinSlider, .hotdealsSlider{
@@ -54,13 +52,18 @@
  
  }
  
- 
- .sugarhain iframe{
- margin: 20px auto;
-  border-radius: 10px;
-
-}
-
+ .ref2{
+  display: none;
+ }
+ .video2{
+  display: none;
+ }
+ .bannerSlider2{
+  display: none;
+ }
+ .newlaunches2{
+  display: none;
+ }
 .newlaunches{
  width: 92%;
  margin: 0px auto;
@@ -69,7 +72,7 @@
 .newlaunches img{
   border-radius: 10px;
 }
-.iframe{
+/* .iframe{
   position: absolute;
   top: 0px;
   right: 0px;
@@ -78,7 +81,7 @@
   max-height: 100%;
   max-width: 100%;
   margin: auto;
-}
+} */
 .tot img{
   width: 50%;
   border-radius: 30px;
@@ -90,4 +93,71 @@
   width: 95%;
  margin: 0px auto;
 }
-    
+    @media screen and (min-width: 786px) and (max-width: 1024px) {
+      .newlaunches img{
+        height: 200px;
+       }
+       
+
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 785px) {
+      .tot img{
+        width: 100%;
+      }
+      .tot{
+        flex-direction: column;
+      }
+      .newlaunches img{
+       
+        height: 220px;
+       }
+      
+      
+       .video1{
+        display: none;
+       }
+       .video2{
+        display: block;
+       }
+      
+    }
+    @media screen and (max-width: 479px) {
+      .tot img{
+        width: 100%;
+      }
+      .tot{
+        flex-direction: column;
+      }
+
+      .newlaunches img{
+       
+        height: 210px;
+       }
+       .bannerSlider1{
+        display: none;
+       }
+       .bannerSlider2{
+        display: block;
+        margin: auto;
+       }
+       .ref1{
+        display: none;
+       }
+       .ref2{
+        display: block;
+       }
+       .video1{
+        display: none;
+       }
+       .video2{
+        display: block;
+       }
+       .newlaunches{
+        display: none;
+       }
+       .newlaunches2{
+        display: block;
+        
+       }
+    }

@@ -1,9 +1,9 @@
 import styles from "./ProductBox.module.css";
-import {   IconButton} from '@chakra-ui/react'
+import {   IconButton,Text,Box,} from '@chakra-ui/react'
 import { FiHeart } from 'react-icons/fi'
 import {  useDispatch } from 'react-redux'
 import { addToCart } from "../../features/Cart/Cart";
-
+import { GiRoundStar } from 'react-icons/gi';
 import { Link } from "react-router-dom";
 function ProductBox(props){
 
@@ -27,6 +27,10 @@ return <div>
             <div className={styles.productDescription} >
                    {props.description}
               </div>
+              <Box   w='fit-content' display='flex' m='auto' gap='6px'>
+        <Text mt='3px' color='green'>   <GiRoundStar  /></Text>
+        <Text color='green'>{props.rating}</Text>
+        </Box>
               <div className={styles.productPrice}>
               ₹{props.price}  
               </div>

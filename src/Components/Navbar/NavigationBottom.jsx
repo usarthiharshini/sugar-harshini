@@ -4,44 +4,44 @@ function NavigationBottom
 (){
     return <div>
 
-
+<div className={styles.navbottom}>
       <div className={styles.div3}>
-                <div className={styles.makeup}>
+                <div className={styles.makeup}/*  style={{backgroundColor:'pink'}} */ >
                     <Link
                         to="/makeup"
-                        style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
+                        style={{ fontSize: "14px" /* fontFamily: "Quicksand" */ }}
                         id={styles.link}
                     >
-                        MAKEUP
+                        Makeup
                     </Link>
 
-                    <div className={styles.dropdown1}>
+                    <div className={styles.dropdown1} >
                         <Link to="/lips">LIPS</Link>
                         <Link to="/face">FACE</Link>
                         <Link to="/eyes">EYES</Link>
                     </div>
                 </div>
 
-                <div className={styles.makeup}>
+                <div   className={styles.makeup}>
                     <Link
                         to="/brushes"
                         style={{ fontSize: "14px"}}
                         id={styles.link}
                     >
-                        BRUSHES
+                        Brushes
                     </Link>
                     <div className={styles.dropdown1}>
                         <Link to="/facebrushes">FACE BRUSHES</Link>
                         <Link to="/eyebrushes">EYE BRUSHES</Link>
                     </div>
                 </div>
-                <div className={styles.makeup}>
+                <div   className={styles.makeup}>
                     <Link
                         to="/skincare"
                         style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
                         id={styles.link}
                     >
-                        SKINCARE
+                        Skincare
                     </Link>
                     <div className={styles.dropdown1}>
                         <Link to="/moisturisers">MOISTURISERS</Link>
@@ -53,13 +53,13 @@ function NavigationBottom
                         <Link to="/aquaholicrange">AQUAHOLIC RANGE</Link>
                     </div>
                 </div>
-                <div className={styles.makeup}>
+                <div   className={styles.makeup}>
                     <Link
                         to="/trending"
                         style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
                         id={styles.link}
                     >
-                        TRENDING
+                        Trending
                     </Link>
                     <div className={styles.dropdown1}>
                         <Link to="/sugarmerchstation">SUGAR MERCH STATION</Link>
@@ -70,13 +70,13 @@ function NavigationBottom
 
                 
 
-                <div>
+                <div >
                     <Link
                         to="/blog"
                         style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
                         id={styles.link}
                     >
-                        BLOG
+                        Blog
                     </Link>
                 </div>
                 <div>
@@ -85,11 +85,29 @@ function NavigationBottom
                         style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
                         id={styles.link}
                     >
-                        OFFERS
+                        Offers
+                    </Link>
+                </div>
+                <div>
+                    <Link
+                        to="/stores"
+                        style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
+                        id={styles.link}
+                    >
+                        Stores
+                    </Link>
+                </div>
+                <div>
+                    <Link
+                        to="/diwaligifting"
+                        style={{ fontSize: "14px", /* fontFamily: "Quicksand" */ }}
+                        id={styles.link}
+                    >
+                        Diwali Gifting
                     </Link>
                 </div>
             </div>
-    </div>
+    </div></div>
 }
 export default NavigationBottom
 

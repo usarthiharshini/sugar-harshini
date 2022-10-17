@@ -1,6 +1,6 @@
 
 
-import { Box, Flex, GridItem, Grid, Text,Spacer } from '@chakra-ui/react';
+import { Box, Flex, GridItem, Grid, Text,Spacer,Skeleton } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { GoChevronDown } from 'react-icons/go';
 import { Link } from 'react-router-dom';
@@ -18,6 +18,13 @@ import {
 import ProductBox from '../Components/ProductBox/ProductBox';
 
 function Brushes() {
+  const breakpoints = {
+    
+    lg: '1024',
+    md: '786',
+    sm: '480',
+   
+  }
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,7 +32,7 @@ function Brushes() {
   const [prod, setProd] = useState('');
   async function getData(url) {
     try {
-      //setLoading(true)
+      setLoading(true)
       var res = await fetch(url)
       var res2 = await res.json();
       console.log(res2);
@@ -58,7 +65,7 @@ function Brushes() {
   }, [order, prod])
   //getData();
   if (loading) {
-
+    
   }
 
   return (
@@ -76,8 +83,8 @@ function Brushes() {
             <Box ml='15px' fontWeight='600'>Brushes</Box>
             <Spacer />
         </Flex>
-      <Flex >
-        <Box display='flex' flexDirection='column' w='25%' h='min-content'borderRadius='10px'  m='15px' gap='10px' bg='white' >
+      <Flex flexDirection={{lg:'row',md:'column',sm:'column'}}>
+        <Box display='flex' flexDirection='column' w={{lg:'25%',md:'35%',sm:'50%'}} h='min-content'borderRadius='10px'  m='15px' gap='10px' bg='white' >
           <Box  >
             <Menu matchWidth='true'>
               <MenuButton as={Button} bg='white' w='80%' >
@@ -123,7 +130,16 @@ function Brushes() {
         </Box>
         <Grid display='grid' templateColumns='repeat(3, 1fr)' w='75%' m='10px'>
 
-          {data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox catg={elem.catg} id={uuidv4()} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
+        {(loading)?<Box m='50px'>
+              <Grid gap='10px' templateColumns={{ lg:'repeat(3,1fr)',md:'repeat(2,1fr)',sm:'repeat(1,1fr)'}}>
+  <Skeleton height='414px' width='307px' borderRadius='10px' />
+  <Skeleton height='414px' width='307px'/>
+  <Skeleton height='414px' width='307px'/>
+  <Skeleton height='414px' width='307px' />
+  <Skeleton height='414px' width='307px'/>
+  <Skeleton height='414px' width='307px'/>
+</Grid>
+   </Box>:data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox rating={elem.rating} catg={elem.catg} id={elem.id} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
 
 
         </Grid>

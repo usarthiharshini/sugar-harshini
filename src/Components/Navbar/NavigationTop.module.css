@@ -1,3 +1,10 @@
+.navmain{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .sugarlogo{
    width: 15%;
 }
@@ -14,6 +21,12 @@ padding: 5px 20px;
     align-self: center;
     margin-left: 10px;
 }
+.searchtop2{
+    width:35%;
+    align-self: center;
+    margin-left: 10px;
+    display: none;
+}
 .loginregister{
    width: 30%;
    align-self: center;
@@ -23,6 +36,7 @@ justify-content: center;
 gap: 6px;
 
 }
+
 .icongroup{
     display: flex ;
     align-items: center;
@@ -41,4 +55,60 @@ justify-content: center;
 .quantityNum p{
     font-size: 10px;
     font-weight: 600;
+}
+.menu{
+    width:'6%';
+    display: none;
+
+}
+@media screen and (min-width: 786px) and (max-width: 1024px){
+ 
+  .quantityNum{
+    right:40px
+  }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 785px) {
+  .searchtop{
+    display: none;
+  }
+  .searchtop2{
+   display: block;
+  }
+  .sugarlogo{
+    width:25%
+  }
+  .quantityNum{
+   
+    right:40px;
+   
+  
+}
+
+
+}
+@media screen  and (max-width: 479px) {
+    .searchtop{
+        display: none;
+      }
+      .searchtop2{
+       display: block;
+      }
+      .loginregister{
+        display: none;
+      }
+      .sugarlogo{
+        width: 40%;
+      }
+      .menu {
+        display: block;
+      }
+      .quantityNum{
+   
+        right:40px;
+       
+      
+    }
+
 }

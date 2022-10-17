@@ -4,9 +4,8 @@ export const cart = createSlice({
  name: 'cart',
   initialState:{
 cartItems: [],
-cartTotalQuantity: 0,
-cartTotalAmount: 0
-
+searchState: '',
+username:'Login/Register'
   },
   reducers: {
 
@@ -37,7 +36,12 @@ cartTotalAmount: 0
       state.cartItems = removeItem;
     },
 
-
+    toggleSearch:(state,action)=>{
+      state.searchState= action.payload;
+    },
+    toggleUsername:(state,action)=>{
+      state.username= action.payload;
+    }
     /* addtoCart:(state,action)=>{
         state.cartItems.push(action.payload);
         
@@ -59,6 +63,6 @@ cartTotalAmount: 0
 })
 
 // Action creators are generated for each case reducer function
-export const { addToCart,incrementQuantity,decrementQuantity,removeItem} = cart.actions
+export const { addToCart,incrementQuantity,decrementQuantity,removeItem,toggleSearch,toggleUsername} = cart.actions
 
 export default cart.reducer

@@ -8,6 +8,15 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function Cart() {
+
+  const breakpoints = {
+    
+    lg: '1024',
+    md: '786',
+    sm: '480',
+   
+  }
+
   const cart = useSelector((state) => state.cart.cartItems);
  
   const dispatch = useDispatch();
@@ -101,7 +110,7 @@ export default function Cart() {
   function ToastExample() {
     const toast = useToast()
     return (
-      <button
+    <Link to='/'>dispatch(toggleUsername(name)  <button
         style={{ backgroundColor: 'black', color: 'white', width: '300px', borderRadius: '10px', fontSize: '20px', padding: '10px', float: 'right', marginRight: '30px', marginTop: '30px', marginBottom: '30px' }}
         /* backgroundColor='black' color='white' width='300px' size='lg' */
         onClick={() =>
@@ -113,10 +122,12 @@ export default function Cart() {
             isClosable: true,
 
           })
+
+        
         }
       >
         ₹{getFinal().finalPrice}  PLACE ORDER
-      </button>
+      </button></Link>
     )
   }
 
@@ -134,9 +145,9 @@ export default function Cart() {
       <Box ml='15px' fontWeight='600'>Cart</Box>
       <Spacer />
     </Flex>
-    <Box m='15px' bg='white' borderRadius='10px' display='flex'>
+    <Box m='15px' bg='white' borderRadius='10px' display='flex' flexDirection={{lg:'row',sm:'column',md:'row',base:'column'}}>
 
-      <Flex flexDirection='column' w='50%'>
+      <Flex flexDirection='column' w={{lg:'50%',md:'50%',sm:'100%',base:'100%'}}>
         <Box bg='whitesmoke' borderRadius='10px' m='15px 30px'>
           <Heading as='h5' m='10px 0px' size='sm' >BONUS OFFERS</Heading >
 
@@ -174,7 +185,7 @@ export default function Cart() {
         </Box>
 
       </Flex>
-      <Flex flexDirection='column' w='50%' >
+      <Flex flexDirection='column' w={{lg:'50%',md:'50%',sm:'100%',base:'100%'}} >
         <Box>
           <Heading as='h5' m='10px 0px' size='sm' >APPLY COUPON</Heading >
           <Box bg='white' borderRadius='10px' m='12px 30px' border='1px solid #e4e4e4' p='10px' display='flex' justifyContent='space-around'>

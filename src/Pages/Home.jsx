@@ -8,7 +8,7 @@ function Home(){
     return <div>
         
 <SimpleSlider/>
-      <Footer/>
+   
     </div>
 }
 export default Home;

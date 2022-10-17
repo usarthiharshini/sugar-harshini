@@ -6,7 +6,7 @@ function NavigationMain
     return <div>
         
 <NavigationTop/>
-<NavigationBottom/>
+
     </div>
 }
 export default NavigationMain

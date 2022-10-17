@@ -6,12 +6,13 @@ import React from "react";
 import Slider from "react-slick";
 import ProductBox from "../ProductBox/ProductBox";
 import { v4 as uuidv4 } from 'uuid';
-
 import { useSelector} from 'react-redux'
+
 
  export default function SimpleSlider() {
 
   const cart = useSelector((state)=>state.cart.cartItems);
+  
   console.log(cart);
    function SampleNextArrow(props) {
       const { className, style, onClick } = props;
@@ -51,7 +52,32 @@ import { useSelector} from 'react-redux'
       dots: false,
     infinite: true,
     slidesToShow: 4,
-     slidesToScroll:4 
+     slidesToScroll:4 ,
+     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        
+        }
+      },
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
     
   };
   const settings3 = {
@@ -60,7 +86,33 @@ import { useSelector} from 'react-redux'
   slidesToShow: 3,
    slidesToScroll:3 ,
    nextArrow: <SampleNextArrow />,
-   prevArrow: <SamplePrevArrow />
+   prevArrow: <SamplePrevArrow />,
+   responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      
+      }
+    },
+    {
+      breakpoint: 786,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  
   
 };
     
@@ -70,7 +122,33 @@ infinite: true,
 slidesToShow: 4,
  slidesToScroll:1 ,
  nextArrow: <SampleNextArrow />,
- prevArrow: <SamplePrevArrow />
+ prevArrow: <SamplePrevArrow />,
+ responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    
+    }
+  },
+  {
+    breakpoint: 786,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }
+]
+
 
 };
 
@@ -306,6 +384,15 @@ const newlaunchesImages=[
   "https://d32baadbbpueqt.cloudfront.net/Homepage/730cf92b-3d4a-4d08-bed8-db88e7911f32.jpg"
 ]
 
+const newlaunchesImages2=[
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/9cfd6ab0-0b3d-463c-abb4-1b1e5884cd2d.jpg",
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/1faaf049-29d7-4a66-95ea-931d57c565bd.gif",
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/a2eba90c-a5e5-491c-9b47-a224e55cd2f7.jpg",
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/b8f9b28b-0289-4148-b84b-78c9bec5f3ce.gif",
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/b973f929-aa28-4879-991d-90f57bbcbbd8.jpg",
+  "https://d32baadbbpueqt.cloudfront.net/Homepage/4256e44a-cae4-455e-986d-af5f5183f451.jpg"
+]
+
 const videoLinks = [
   "https://cdn4.fireworktv.com/medias/2022/10/11/1665490644-wszacfjo/watermarked/540/WhatsAppVideo2022-10-11at5.28.04PM.mp4",
   "https://cdn4.fireworktv.com/medias/2022/10/11/1665491445-phqugwak/watermarked/540/WhatsAppVideo2022-10-11at5.29.57PM1.mp4",
@@ -329,9 +416,10 @@ const exploreImages =[
 
 
     return <div>
+ 
       <div className={styles.bannermain}  >
         
-        <Slider {...settings1}   >
+        <Slider {...settings1}  className={styles.bannerSlider1}  >
           <div>
             <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/1a5a5848-f287-4da7-b122-23ccb9324c83.jpg" alt= "img"/>
           </div>
@@ -351,6 +439,40 @@ const exploreImages =[
            <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/1fa29c9d-b7b6-4aa9-ac54-a2195c10fc63.jpg" alt="" />
           </div>
         </Slider>
+</div>
+        <Slider {...settings1}  className={styles.bannerSlider2}  >
+         
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/e320d245-5aeb-4433-b0b1-9a67c2d78303.jpg
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/0b94d1b3-8011-435b-b38d-8acdc8f53710.jpg
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/8f3b13ce-686b-4bd1-b2e5-e2534e2de3ec.gif
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/5edfd368-351e-47e7-8384-6bca3eb16df9.jpg
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/0004c0e1-9c86-430f-8d94-293724658e3f.jpg
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/0e92b87a-f7d0-4b9b-955f-69d072926812.jpg
+' alt="" />
+            </div>
+            <div>
+              <img src='  https://d32baadbbpueqt.cloudfront.net/Homepage/de7f55a1-a84b-4690-8f11-1dddc2518964.jpg
+' alt="" />
+            </div>
+          
+          </Slider>
+
 
 {/* BEST SELLERS */}
         <div className={styles.bestsellers}>
@@ -359,7 +481,7 @@ const exploreImages =[
            
              { bestsellerImages.map((image)=> 
 
-<ProductBox id={uuidv4()} url={image.url} description={image.description} price={image.price} key={image.id}/>
+<ProductBox rating={4.2} id={uuidv4()} url={image.url} description={image.description} price={image.price} key={image.id}/>
            
          )}
           </Slider>
@@ -383,7 +505,7 @@ const exploreImages =[
            
            { justinImages.map((image)=> 
 
-       <ProductBox url={image.url} description={image.description} price={image.price}/>
+       <ProductBox rating={4.4} url={image.url} description={image.description} price={image.price}/>
 
        )}
         </Slider>
@@ -392,8 +514,27 @@ const exploreImages =[
         {/* SUGAR HAI */}
         <div className={styles.sugarhain}>
         <h1 className={styles.headings2}>SHUKAR HAI SUGAR HAI</h1>
-        <iframe width="1024" height="361" src="https://www.youtube.com/embed/ZNPEgRIEkBY" title="SUGAR's New TV Commercial ft. Ranveer & Tamannaah | In Hindi | #ShukarHaiSUGARHai | SUGAR Cosmetics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        
+<AspectRatio  ratio={2.68} w='93%'m='auto' borderRadius='20px' position='relative'  className={styles.video1}>
+     
+  <iframe
+   
+    title="SUGAR's New TV Commercial"
+    src='https://www.youtube.com/embed/ZNPEgRIEkBY'
+    allowFullScreen
+  />
+</AspectRatio>
+<AspectRatio  ratio={1.5} w='93%'m='auto' borderRadius='20px' position='relative'  className={styles.video2}>
+     
+  <iframe
+   
+    title="SUGAR's New TV Commercial"
+    src='https://www.youtube.com/embed/ZNPEgRIEkBY'
+    allowFullScreen
+  />
+</AspectRatio>
+{/*         <iframe width="100%" height="" src="https://www.youtube.com/embed/ZNPEgRIEkBY" title="SUGAR's New TV Commercial ft. Ranveer & Tamannaah | In Hindi | #ShukarHaiSUGARHai | SUGAR Cosmetics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ */}        </div>
 
 {/* TOP PICKS OF THE WEEK */}
         <div className={styles.hotdeals}>
@@ -413,7 +554,7 @@ const exploreImages =[
         <Slider {...settings2} className={styles.justinSlider}>
            
            { giftingImages.map((image)=> 
-          <ProductBox url={image.url} description={image.description} price={image.price}/>
+          <ProductBox rating={4.7} url={image.url} description={image.description} price={image.price}/>
        )}
         </Slider>
         </div>
@@ -421,14 +562,15 @@ const exploreImages =[
 
 {/* REFER YOUR FRIENDS */}
 <h1 className={styles.headings2}>REFER YOUR FRIENDS</h1>
-<img style={{ margin: "20px auto", borderRadius: "10px",width:"92%"}} src="https://d32baadbbpueqt.cloudfront.net/Homepage/8bfe8bb4-002d-4097-a773-6af33325a594.jpg" alt="" />
+<img className={styles.ref1} style={{ margin: "20px auto", borderRadius: "10px",width:"92%"}} src="https://d32baadbbpueqt.cloudfront.net/Homepage/8bfe8bb4-002d-4097-a773-6af33325a594.jpg" alt="" />
+<img className={styles.ref2} style={{ margin: "20px auto", borderRadius: "10px",width:"92%"}} src="https://d32baadbbpueqt.cloudfront.net/Homepage/bb653d1c-a68d-4272-a5ca-832fc3009ff5.jpg" alt="" />
 {/* SUPER SAVERS */}
 <div className={styles.supersavers}>
         <h1 className={styles.headings}>SUPER SAVERS</h1>
           <Slider {...settings2} className={styles.bestsellersSlider} >
            
              { supersaverImages.map((image)=> 
-             <ProductBox url={image.url} description={image.description} price={image.price}/>
+             <ProductBox rating={4.2}url={image.url} description={image.description} price={image.price}/>
          )}
           </Slider>
           <div className={styles.headingspace}></div>
@@ -442,6 +584,12 @@ const exploreImages =[
           <img  src={image} alt=""  />
         )}
           </Slider>
+          <Slider {...settings1}  className={styles.newlaunches2} >
+       
+        {newlaunchesImages2.map((image)=>
+          <img  src={image} alt=""  />
+        )}
+          </Slider>
 
           {/* SUGAR STREAM */}
 
@@ -452,7 +600,7 @@ const exploreImages =[
            { videoLinks.map((image)=> 
        
               
-<AspectRatio maxW='90%'   ratio={452/800}  >
+<AspectRatio maxW='90%'   ratio={452/800} borderRadius='20px' position='relative' overflow='hidden'  >
   <iframe
    
    border-radius= '20px'
@@ -486,7 +634,10 @@ const exploreImages =[
           </Slider>
         </div>
       </div>
+ 
+      
 
-      </div>
+
+
   }
 

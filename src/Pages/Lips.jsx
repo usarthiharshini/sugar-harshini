@@ -16,6 +16,13 @@ import {
 import ProductBox from '../Components/ProductBox/ProductBox';
 
 function Lips() {
+  const breakpoints = {
+    
+    lg: '1024',
+    md: '786',
+    sm: '480',
+   
+  }
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -62,8 +69,8 @@ function Lips() {
   return (
     <div >
 
-      <Flex >
-        <Box display='flex' flexDirection='column' w='25%' h='min-content' m='15px' gap='10px'  >
+      <Flex flexDirection={{lg:'row',md:'column',sm:'column'}}>
+        <Box display='flex' flexDirection='column' w={{lg:'25%',md:'35%',sm:'50%'}} h='min-content' m='15px' gap='10px'  >
           <Box  >
             <Menu matchWidth='true'>
               <MenuButton as={Button} bg='white' w='80%' >
@@ -107,9 +114,9 @@ function Lips() {
             </Menu>
           </Box>
         </Box>
-        <Grid display='grid' templateColumns='repeat(3, 1fr)' w='75%' m='10px'>
+        <Grid display='grid' templateColumns={{ lg:'repeat(3,1fr)',md:'repeat(2,1fr)',sm:'repeat(1,1fr)'}} w='75%' m='10px'>
 
-          {data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox catg={elem.catg} id={elem.id} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
+          {data.map((elem) => (elem.price !== undefined && <GridItem><ProductBox rating={elem.rating} catg={elem.catg} id={elem.id} url={elem.image} description={elem.name} price={elem.price} /></GridItem>))}
 
 
         </Grid>
