@@ -1,18 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const cart = createSlice({
- name: 'cart',
-  initialState:{
-cartItems: [],
-searchState: '',
-username:'Login/Register'
+  name: "cart",
+  initialState: {
+    cartItems: [],
+    searchState: "",
+    username: "Login/Register",
   },
   reducers: {
-
-
-
     addToCart: (state, action) => {
-      const itemInCart = state.cartItems.find((item) => item.id === action.payload.id);
+      const itemInCart = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
       if (itemInCart) {
         itemInCart.quantity++;
       } else {
@@ -26,43 +25,36 @@ username:'Login/Register'
     decrementQuantity: (state, action) => {
       const item = state.cartItems.find((item) => item.id === action.payload);
       if (item.quantity === 1) {
-        item.quantity = 1
+        item.quantity = 1;
       } else {
         item.quantity--;
       }
     },
     removeItem: (state, action) => {
-      const removeItem = state.cartItems.filter((item) => item.id !== action.payload);
+      const removeItem = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
       state.cartItems = removeItem;
     },
 
-    toggleSearch:(state,action)=>{
-      state.searchState= action.payload;
+    toggleSearch: (state, action) => {
+      state.searchState = action.payload;
     },
-    toggleUsername:(state,action)=>{
-      state.username= action.payload;
-    }
-    /* addtoCart:(state,action)=>{
-        state.cartItems.push(action.payload);
-        
+    toggleUsername: (state, action) => {
+      state.username = action.payload;
     },
-    increment: (state) => {
-      console.log("hi")
-      console.log(state.cartItems[0].quantity)
-      state.cartItems.quantity+= 1
-      
-      
-    },
-    decrement: (state) => {
-      state.cartItems.quantity -= 1
-    },/*
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    }, */
+   
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { addToCart,incrementQuantity,decrementQuantity,removeItem,toggleSearch,toggleUsername} = cart.actions
+// Action creators for reducer function
+export const {
+  addToCart,
+  incrementQuantity,
+  decrementQuantity,
+  removeItem,
+  toggleSearch,
+  toggleUsername,
+} = cart.actions;
 
-export default cart.reducer
+export default cart.reducer;

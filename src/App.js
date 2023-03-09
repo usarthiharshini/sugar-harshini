@@ -1,15 +1,13 @@
-
-import './App.css';
-import AllPages from './Components/AllPages';
-import Footer from './Components/Footer/Footer';
-import NavigationMain from './Components/Navbar/NavigationMain';
+import "./App.css";
+import AllPages from "./Components/AllPages";
+import Footer from "./Components/Footer/Footer";
+import NavigationMain from "./Components/Navbar/NavigationMain";
 function App() {
-  
   return (
-    <div className="App" >
-      <NavigationMain/>
-     <AllPages/>
-     <Footer/>
+    <div className="App">
+      <NavigationMain />
+      <AllPages />
+      <Footer />
     </div>
   );
 }

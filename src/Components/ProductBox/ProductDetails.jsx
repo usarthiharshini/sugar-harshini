@@ -1,8 +1,4 @@
-
-
-function ProductDetails(){
-    return <div>
-        
-    </div>
+function ProductDetails() {
+  return <div></div>;
 }
-export default ProductDetails
+export default ProductDetails;
