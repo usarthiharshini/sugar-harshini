@@ -5,7 +5,9 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/Cart/Cart";
 import { GiRoundStar } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 function ProductBox(props) {
+    const [added,setAdded]= useState(false)
   const dispatch = useDispatch();
   const payload = {
     url: props.url,
@@ -13,6 +15,12 @@ function ProductBox(props) {
     price: props.price,
     id: props.id,
   };
+
+
+  const fun =()=>{
+    setAdded(true)
+    dispatch(addToCart(payload))
+  }
 
   return (
     <div>
@@ -41,7 +49,7 @@ function ProductBox(props) {
             />
           </button>
           <button
-            onClick={() => dispatch(addToCart(payload))}
+            onClick={() => fun()}
             style={{
               width: "150px",
               color: "white",
@@ -49,7 +57,7 @@ function ProductBox(props) {
               borderRadius: "5px",
             }}
           >
-            ADD TO CART
+        {added?  "ADDED" : "ADD TO CART" }
           </button>
         </div>
       </div>

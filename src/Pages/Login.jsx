@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { toggleUsername } from "../features/Cart/Cart";
 
 const Login = () => {
-  const name = "Shivani Chauhan";
+  const name = "User";
   const dispatch = useDispatch();
   const [status, setStatus] = useState(false);
   function ToastExample() {

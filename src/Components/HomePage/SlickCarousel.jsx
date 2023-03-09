@@ -498,6 +498,7 @@ export default function SimpleSlider() {
               url={image.url}
               description={image.description}
               price={image.price}
+              catg="makeup"
             />
           ))}
         </Slider>

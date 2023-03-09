@@ -186,12 +186,12 @@ function Makeup() {
           {loading ? (
             <Box m="50px">
               <Grid gap="10px" templateColumns="repeat(3, 1fr)">
-                <Skeleton height="414px" width="307px" borderRadius="10px" />
-                <Skeleton height="414px" width="307px" />
-                <Skeleton height="414px" width="307px" />
-                <Skeleton height="414px" width="307px" />
-                <Skeleton height="414px" width="307px" />
-                <Skeleton height="414px" width="307px" />
+                <Skeleton height="400px" width="280px" borderRadius="10px" />
+                <Skeleton height="400px" width="280px" />
+                <Skeleton height="400px" width="280px" />
+                <Skeleton height="400px" width="280px" />
+                <Skeleton height="400px" width="280px" />
+                <Skeleton height="400px" width="280px" />
               </Grid>
             </Box>
           ) : (
