@@ -15,7 +15,7 @@ export default function MakeupIndividual() {
     const getData = async () => {
        
         try {
-            let res = await  fetch(`https://cosmeticsapi1.herokuapp.com/makeup/${id}`)
+            let res = await  fetch(`https://sugarcosm-api.onrender.com/api/makeup/${id}`)
             let data = await res.json();
             console.log(id);
             console.log(catg);

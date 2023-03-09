@@ -51,13 +51,13 @@ function Skincare() {
 
   }
   useEffect(() => {
-    let url = "https://cosmeticsapi1.herokuapp.com/Skincare"
+    let url = "https://sugarcosm-api.onrender.com/api/Skincare"
     if (prod.length !== 0 && order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Skincare?_sort=price&_order=${order}&q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Skincare?_sort=price&_order=${order}&q=${prod}`
     else if (prod.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Skincare?q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Skincare?q=${prod}`
     else if (order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Skincare?_sort=price&_order=${order}`
+      url = `https://sugarcosm-api.onrender.com/api/Skincare?_sort=price&_order=${order}`
 
     getData(url);
 

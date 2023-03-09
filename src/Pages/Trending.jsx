@@ -51,13 +51,13 @@ function Trending() {
 
   }
   useEffect(() => {
-    let url = "https://cosmeticsapi1.herokuapp.com/treanding"
+    let url = "https://sugarcosm-api.onrender.com/api/treanding"
     if (prod.length !== 0 && order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/treanding?_sort=price&_order=${order}&q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/treanding?_sort=price&_order=${order}&q=${prod}`
     else if (prod.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/treanding?q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/treanding?q=${prod}`
     else if (order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/treanding?_sort=price&_order=${order}`
+      url = `https://sugarcosm-api.onrender.com/api/treanding?_sort=price&_order=${order}`
 
     getData(url);
 

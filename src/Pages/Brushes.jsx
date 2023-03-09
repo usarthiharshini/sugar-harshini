@@ -52,13 +52,13 @@ function Brushes() {
 
   }
   useEffect(() => {
-    let url = "https://cosmeticsapi1.herokuapp.com/brushes"
+    let url = "https://sugarcosm-api.onrender.com/api/brushes"
     if (prod.length !== 0 && order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/brushes?_sort=price&_order=${order}&q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/brushes?_sort=price&_order=${order}&q=${prod}`
     else if (prod.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/brushes?q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/brushes?q=${prod}`
     else if (order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/brushes?_sort=price&_order=${order}`
+      url = `https://sugarcosm-api.onrender.com/api/brushes?_sort=price&_order=${order}`
 
     getData(url);
 

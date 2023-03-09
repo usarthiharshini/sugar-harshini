@@ -14,7 +14,7 @@ export default function Search(){
     const getData = async ()=>{
         try {
             setLoading(true)
-          let res = await fetch(`https://cosmeticsapi1.herokuapp.com/makeup?q=${searchQuery}`);
+          let res = await fetch(`https://sugarcosm-api.onrender.com/api/makeup?q=${searchQuery}`);
           let data = await res.json();
           console.log(searchQuery);
           setProducts(data);

@@ -43,13 +43,13 @@ function Eyes() {
 
   }
   useEffect(() => {
-    let url = "https://cosmeticsapi1.herokuapp.com/Eyes"
+    let url = "https://sugarcosm-api.onrender.com/api/Eye"
     if (prod.length !== 0 && order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Eyes?_sort=price&_order=${order}&q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Eye?_sort=price&_order=${order}&q=${prod}`
     else if (prod.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Eyes?q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Eye?q=${prod}`
     else if (order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Eyes?_sort=price&_order=${order}`
+      url = `https://sugarcosm-api.onrender.com/api/Eye?_sort=price&_order=${order}`
 
     getData(url);
 

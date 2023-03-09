@@ -15,7 +15,7 @@ export default function LipsIndividual() {
     const getData = async () => {
        
         try {
-            let res = await  fetch(`https://cosmeticsapi1.herokuapp.com/Lips/${id}`)
+            let res = await  fetch(`https://sugarcosm-api.onrender.com/api/Lips/${id}`)
             let data = await res.json();
             console.log(id);
             console.log(catg);

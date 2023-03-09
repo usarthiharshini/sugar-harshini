@@ -50,13 +50,13 @@ function Lips() {
 
   }
   useEffect(() => {
-    let url = "https://cosmeticsapi1.herokuapp.com/Lips"
+    let url = "https://sugarcosm-api.onrender.com/api/Lips"
     if (prod.length !== 0 && order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Lips?_sort=price&_order=${order}&q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Lips?_sort=price&_order=${order}&q=${prod}`
     else if (prod.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Lips?q=${prod}`
+      url = `https://sugarcosm-api.onrender.com/api/Lips?q=${prod}`
     else if (order.length !== 0)
-      url = `https://cosmeticsapi1.herokuapp.com/Lips?_sort=price&_order=${order}`
+      url = `https://sugarcosm-api.onrender.com/api/Lips?_sort=price&_order=${order}`
 
     getData(url);
 
